@@ -1,0 +1,139 @@
+body {
+  background: url('i.pinimg.com/736x/cb/20/86/cb20863aa345b94e414ad78963e5e76f.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+canvas#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.machine-body {
+  background: #fff;
+  border: 10px solid #ffb6c1;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.1), 0 5px 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.screen {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #f0f8ff;
+  border: 5px inset #d3d3d3;
+  border-radius: 20px;
+}
+
+.reel {
+  background: white;
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  font-size: 50px;
+  border: 4px solid #ccc;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.base {
+  width: 100%;
+  height: 20px;
+  background: #ffb6c1;
+  border-radius: 0 0 20px 20px;
+  margin-top: 10px;
+}
+
+.lever-box {
+  position: relative;
+  width: 60px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.lever-stick {
+  width: 10px;
+  height: 100px;
+  background: #999;
+  border-radius: 5px;
+}
+
+.lever-knob {
+  width: 40px;
+  height: 40px;
+  background: red;
+  border: 4px solid #800;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.lever-knob:active {
+  transform: translateY(10px);
+}
+
+#final-message {
+  animation: fadeInZoom 1s ease forwards;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(240, 248, 255, 0.95);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+#final-message h1 {
+  font-size: 3em;
+  color: #007bff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
